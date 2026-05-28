@@ -16,7 +16,7 @@
 ---
 
 ### 🌐 Live Demo
-👉 **[Launch Interactive Game Show Board](https://bearbroyes.github.io/family-fued-english/)**
+👉 **[Launch Interactive Game Show Board](https://bearbroyes.github.io/family-feud-english/)**
 
 ---
 
