@@ -1,4 +1,4 @@
-# 🎮 Classroom Feud — English Teacher Game Show Suite
+# 🎮 Family Feud — English Teacher Game Show Suite
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/bearbroyes/family-feud-english/main/src/assets/Granateo.png" alt="Banner" width="100%">
