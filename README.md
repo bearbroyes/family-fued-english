@@ -24,7 +24,7 @@
 ## 🚀 Live Demo
 
 Check out the interactive web app here: 
-👉 **[Play Classroom Feud](https://bearbroyes.github.io/family-fued-english/)**
+👉 **[Play Classroom Feud](https://bearbroyes.github.io/family-feud-english/)**
 
 ---
 <p align="center">Made for engaging and immersive educational experiences 💡</p>
