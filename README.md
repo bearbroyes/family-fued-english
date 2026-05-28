@@ -1,7 +1,7 @@
 # 🎮 Classroom Feud — English Teacher Game Show Suite
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/bearbroyes/classroom-feud/main/src/assets/Granateo.png" alt="Banner" width="100%">
+  <img src="https://raw.githubusercontent.com/bearbroyes/family-feud-english/main/src/assets/Granateo.png" alt="Banner" width="100%">
 </p>
 
 <p align="center">
