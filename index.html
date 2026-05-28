@@ -1,0 +1,2025 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classroom Feud for English Learners</title>
+    
+    <!-- Google Fonts for premium theme -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+      // Tailor Tailwind settings to display aesthetic
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Space Grotesk', 'sans-serif'],
+              digital: ['Orbitron', 'monospace'],
+            }
+          }
+        }
+      }
+    </script>
+    
+    <style>
+      /* CSS 3D Card Reveal Flip Animations */
+      .perspective-1000 {
+        perspective: 1000px;
+      }
+      .preserve-3d {
+        transform-style: preserve-3d;
+      }
+      .backface-hidden {
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+      }
+      .rotate-y-180 {
+        transform: rotateY(180deg) !important;
+      }
+
+      /* Custom scrollbars for clean lists */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: rgba(15, 23, 42, 0.3);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(99, 102, 241, 0.3);
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(99, 102, 241, 0.5);
+      }
+
+      /* Custom animations & glow styles */
+      .neon-glow {
+        text-shadow: 0 0 10px rgba(129, 140, 248, 0.5), 0 0 20px rgba(129, 140, 248, 0.3);
+      }
+      .glass-card {
+        background: rgba(15, 23, 42, 0.6);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 30px rgba(99, 102, 241, 0.15);
+      }
+      .btn-primary {
+        background: linear-gradient(135deg, #818cf8 0%, #6366f1 100%);
+        transition: all 0.2s ease;
+      }
+      .btn-primary:hover {
+        transform: scale(1.05);
+        filter: brightness(1.1);
+        box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+      }
+      .btn-neon {
+        box-shadow: 0 0 10px rgba(99, 102, 241, 0.2);
+        transition: all 0.3s ease;
+      }
+      .btn-neon:hover {
+        box-shadow: 0 0 25px rgba(99, 102, 241, 0.6), 0 0 40px rgba(168, 85, 247, 0.3);
+        transform: translateY(-2px);
+      }
+      .text-neon-heading {
+        background: linear-gradient(135deg, #f472b6 0%, #c084fc 50%, #818cf8 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+  </head>
+  <body class="bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 text-slate-100 font-sans min-h-screen relative overflow-x-hidden pb-12">
+    
+    <!-- Background glowing atmospheric circles for depth -->
+    <div class="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-purple-900/10 blur-[150px] pointer-events-none"></div>
+    <div class="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-indigo-900/10 blur-[150px] pointer-events-none"></div>
+
+    <!-- Header navigation bar -->
+    <header class="border-b border-white/10 bg-slate-900/40 backdrop-blur-md sticky top-0 z-40">
+      <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-pink-500 via-purple-500 to-indigo-500 flex items-center justify-center text-white font-extrabold shadow-[0_0_15px_rgba(168,85,247,0.5)]">
+            FF
+          </div>
+          <div>
+            <h1 class="font-display font-extrabold text-lg tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-400 leading-none">CLASSROOM FEUD</h1>
+            <p class="text-[10px] text-slate-400 uppercase tracking-widest mt-1">English Teacher Game Show Suite</p>
+          </div>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+          <span class="text-xs bg-slate-950 px-3 py-1.5 rounded-lg border border-white/5 text-slate-400 flex items-center">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-2 animate-ping"></span>
+            English Session Board
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main dynamic viewport container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+      
+      <!-- SCREEN 1: BLANK CONSTRUCTOR (SETUP MODE) -->
+      <section id="screen-setup" class="transition-all duration-300 space-y-6">
+        
+        <!-- Welcome intro Banner -->
+        <div class="glass-card rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="space-y-1 text-center sm:text-left">
+            <h2 class="text-xl font-bold font-display text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-indigo-200">Welcome to Classroom Feud!</h2>
+            <p class="text-xs text-slate-400 max-w-xl">
+              Create and order quiz rounds for your English lesson. Toggle points, arrange vocabulary or expressions, and launch an immersive game show board for team competitions.
+            </p>
+          </div>
+          <div class="shrink-0">
+            <button id="btn-demo-refresh" onclick="loadDefaultQuestions()" class="text-xs px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-indigo-300 hover:text-white border border-indigo-500/10 hover:border-indigo-400/30 rounded-xl transition-all duration-200 flex items-center space-x-2">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 8H18.5M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1.5 12h2M20.5 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+              </svg>
+              <span>Reload 2 English Demos</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Team Setup Panel -->
+        <div class="glass-card rounded-2xl p-5 grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+          <div class="md:col-span-5 space-y-1">
+            <h3 class="font-display font-bold text-base text-indigo-200 flex items-center">
+              <svg class="w-5 h-5 mr-2 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+              <span>Rename Competing Teams</span>
+            </h3>
+            <p class="text-xs text-slate-400">Personalize names for the competing student groups.</p>
+          </div>
+          <div class="md:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="space-y-1">
+              <label for="team1-name-input" class="text-[10px] uppercase font-bold tracking-wider text-cyan-400">Team 1 Name (Blue)</label>
+              <input type="text" id="team1-name-input" value="Team A" placeholder="e.g. SMART COOKIES" 
+                class="w-full bg-slate-950 border border-slate-800 focus:border-cyan-500 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:ring-1 focus:ring-cyan-500 font-medium" />
+            </div>
+            <div class="space-y-1">
+              <label for="team2-name-input" class="text-[10px] uppercase font-bold tracking-wider text-pink-400">Team 2 Name (Pink)</label>
+              <input type="text" id="team2-name-input" value="Team B" placeholder="e.g. BRAINBOXES" 
+                class="w-full bg-slate-950 border border-slate-800 focus:border-pink-500 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:ring-1 focus:ring-pink-500 font-medium" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Constructor Split Grid Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          
+          <!-- LEFT COLUMN: Form Developer -->
+          <div class="lg:col-span-7 glass-card rounded-2xl p-6 flex flex-col space-y-6">
+            
+            <div class="flex items-center justify-between border-b border-white/5 pb-4">
+              <div>
+                <h3 id="editor-form-title" class="font-display font-bold text-lg text-indigo-200">Develop New Round</h3>
+                <p class="text-[11px] text-slate-400">Specify English clue statements and answers with custom weightages.</p>
+              </div>
+              <button onclick="resetEditorForm()" class="text-xs px-2.5 py-1 text-slate-400 hover:text-slate-100 transition-colors bg-slate-800/50 hover:bg-slate-800 rounded-lg border border-slate-700/50">
+                Cancel / Reset
+              </button>
+            </div>
+ 
+            <!-- Interactive Fast Import Templates & Paste Bar -->
+            <div class="bg-indigo-950/20 border border-indigo-500/10 rounded-xl p-4.5 space-y-4">
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-[11px] uppercase tracking-wider font-extrabold text-indigo-300">Fast Templates & ChatGPT Import</span>
+                  <p class="text-[10px] text-slate-400 mt-0.5">Speed up round creation with presets or plain text import.</p>
+                </div>
+                <span class="flex h-2 w-2 relative">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+                </span>
+              </div>
+              
+              <div class="flex flex-col gap-3">
+                <!-- Open Quick Import Text Area -->
+                <button onclick="toggleImportArea()" class="w-full p-3.5 bg-indigo-900/40 hover:bg-indigo-900/60 border border-indigo-505/30 hover:border-indigo-400/50 rounded-xl text-center text-xs font-bold text-indigo-100 hover:text-white transition-all duration-200 flex items-center justify-center space-x-2 shadow-sm active:scale-95">
+                  <svg class="w-4 h-4 text-indigo-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                  </svg>
+                  <span>Вставить шаблон</span>
+                </button>
+              </div>
+
+              <!-- AI Prompt instructions card -->
+              <div class="bg-slate-950/65 border border-indigo-500/10 rounded-xl p-3.5 space-y-2.5">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                  <span class="text-[10px] font-bold tracking-wider text-slate-400 uppercase">ChatGPT Prompt Recipe</span>
+                  <button id="btn-copy-prompt" onclick="copyAIPromptToClipboard()" class="self-start text-[10px] text-cyan-400 hover:text-cyan-300 transition-colors font-semibold flex items-center space-x-1.5 px-2.5 py-1 bg-cyan-950/40 border border-cyan-500/20 hover:border-cyan-400/50 rounded-lg active:scale-95">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <!-- copy page vectors -->
+                      <rect x="9" y="9" width="13" height="13" rx="1.5" ry="1.5" stroke="currentColor" stroke-width="2"></rect>
+                      <path d="M5 15H4a1.5 1.5 0 0 1-1.5-1.5V4a1.5 1.5 0 0 1 1.5-1.5h9a1.5 1.5 0 0 1 1.5 1.5v1" stroke="currentColor" stroke-width="2"></path>
+                    </svg>
+                    <span id="copy-prompt-label">Copy ChatGPT Prompt Instruction</span>
+                  </button>
+                </div>
+                <div class="bg-slate-950/90 border border-slate-900 rounded-lg p-2.5 font-mono text-[9px] text-slate-400 overflow-x-auto select-all leading-relaxed whitespace-pre" id="ai-prompt-preview">Please generate 4 custom Family Feud game show rounds about animals in this exact plain text format:
+
+We asked 100 people: "What is the most famous wild animal?"
+lion
+tiger
+elephant
+bear
+panda
+
+We asked 100 people: "Which animal is the fastest in the world?"
+cheetah
+leopard
+antelope
+horse</div>
+                <p class="text-[10.5px] text-slate-400 leading-relaxed">
+                  Send this prompt to ChatGPT/Gemini to generate custom lessons blocks, copy the text response, and paste it under <span class="text-indigo-300 font-semibold">Вставить шаблон</span>!
+                </p>
+              </div>
+
+              <!-- Collapsible Import Text Area Area -->
+              <div id="import-area-container" class="hidden space-y-3 border-t border-white/5 pt-3.5">
+                <label for="import-textarea" class="text-[10px] font-bold uppercase tracking-wider text-indigo-300 block">Paste plain text questions below:</label>
+                <textarea id="import-textarea" rows="8" placeholder='We asked 100 students: "What is your favorite animal?"
+cat
+dog
+panda
+lion
+koala
+
+We asked 100 people: "Name a noisy pet"
+dog
+parrot
+cat
+guinea pig' class="w-full bg-slate-950 border border-slate-800 focus:border-indigo-500 rounded-xl p-3.5 text-xs text-slate-100 placeholder-slate-700 focus:outline-none focus:ring-1 focus:ring-indigo-500 font-medium"></textarea>
+                
+                <div class="grid grid-cols-2 gap-3">
+                  <button onclick="executeImport()" class="py-3 bg-gradient-to-r from-emerald-600 to-teal-605 hover:from-emerald-500 hover:to-teal-500 text-white text-xs font-bold rounded-xl tracking-wide transition-all shadow-md active:scale-95 flex items-center justify-center space-x-1.5">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Импортировать в список</span>
+                  </button>
+                  <button onclick="toggleImportArea()" class="py-3 bg-slate-900 hover:bg-slate-800 text-slate-400 border border-slate-800 text-xs font-semibold rounded-xl text-center active:scale-95">
+                    Отмена
+                  </button>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="space-y-4">
+              <!-- Question Clue Statement Input -->
+              <div class="space-y-1.5">
+                <label for="editor-question" class="text-xs font-semibold uppercase tracking-wider text-slate-400">Question Clue Statement</label>
+                <div class="relative">
+                  <input type="text" id="editor-question" placeholder="e.g. Common answers for not doing spelling homework"
+                    class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-4 pr-10 py-3 text-slate-100 placeholder-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 font-medium" />
+                  <div class="absolute right-3.5 top-3.5 text-slate-600">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Answer Rows Section -->
+              <div class="space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Board Option Rows (3 to 8 Options)</span>
+                  <button type="button" onclick="addEditorRow()" class="text-xs text-indigo-400 hover:text-indigo-300 font-bold flex items-center space-x-1 py-1 px-2.5 rounded-lg bg-indigo-500/10 hover:bg-indigo-500/20 transition-all">
+                    <svg class="w-3.5 h-3.5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                    </svg>
+                    <span>Add Answer</span>
+                  </button>
+                </div>
+
+                <div id="editor-answers-list" class="space-y-2.5 max-h-[320px] overflow-y-auto pr-1">
+                  <!-- Generated Answer Rows Inject Here -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Saves constructor trigger -->
+            <div class="pt-4 border-t border-white/5">
+              <button id="btn-save-blank" onclick="saveCurrentBlank()" class="w-full py-3 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white rounded-xl font-bold tracking-wide transition-all duration-200 flex items-center justify-center shadow-lg active:scale-[0.99]" style="box-shadow: 0 4px 20px rgba(99,102,241,0.2)">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                </svg>
+                <span>Add Round to Queue</span>
+              </button>
+            </div>
+
+          </div>
+
+          <!-- RIGHT COLUMN: Round sequence Queue list -->
+          <div class="lg:col-span-5 glass-card rounded-2xl p-6 flex flex-col min-h-[480px]">
+            
+            <div class="border-b border-white/5 pb-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+              <div>
+                <h3 class="font-display font-bold text-lg text-indigo-200">Round Sequence Queue</h3>
+                <p class="text-[11px] text-slate-400">Upcoming game sequence playing out. Reorder rounds seamlessly.</p>
+              </div>
+              <button onclick="deleteAllBlanks()" class="self-start sm:self-center py-1.5 px-3 bg-rose-550/10 hover:bg-rose-500/20 border border-rose-500/20 text-rose-400 hover:text-rose-300 text-xs font-semibold rounded-lg transition-all active:scale-95 flex items-center space-x-1" title="Clear entire sequence queue">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                </svg>
+                <span>Удалить всё</span>
+              </button>
+            </div>
+
+            <!-- Dynamic element grid queue container -->
+            <div id="queue-items-list" class="flex-1 overflow-y-auto space-y-3 mt-4 pr-1">
+              <!-- Rendered items of queue here -->
+            </div>
+
+            <!-- Bottom Trigger Launch Button -->
+            <div class="pt-6 border-t border-white/5 mt-4">
+              <button id="btn-start-game" onclick="startGameSession()" class="w-full py-4 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white font-display font-extrabold text-lg rounded-xl tracking-widest transition-all duration-300 transform btn-neon flex items-center justify-center space-x-2">
+                <svg class="w-6 h-6 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span>START GAME NOW</span>
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- SCREEN 2: PLAY MODE -->
+      <section id="screen-play" class="hidden transition-all duration-300 space-y-8">
+        
+        <!-- Round metadata -->
+        <div class="flex flex-col items-center text-center space-y-2">
+          <span id="play-round-badge" class="px-4 py-1 rounded-full bg-indigo-950/80 border border-indigo-400/40 text-xs font-bold text-indigo-300 tracking-widest uppercase shadow-[0_0_15px_rgba(99,102,241,0.2)]">
+            ROUND 1 OF 2
+          </span>
+          <h2 id="play-question" class="text-2xl md:text-4xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-400 drop-shadow-[0_2px_10px_rgba(99,102,241,0.3)] min-h-[50px] font-display max-w-4xl px-4 mt-2">
+            Loading clue question Statement...
+          </h2>
+        </div>
+
+        <!-- Central Score & Classroom Controls Matrix (Two Teams setup!) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch max-w-6xl mx-auto py-2">
+          
+          <!-- TEAM 1 PANEL (Left - Cyan/Blue) -->
+          <div class="lg:col-span-4 bg-slate-900/60 border border-cyan-500/20 rounded-2xl p-5 flex flex-col items-center justify-between space-y-4 relative overflow-hidden group hover:border-cyan-500/40 transition-all">
+            <div class="absolute top-0 left-0 w-2 h-full bg-cyan-500/30"></div>
+            <div class="text-center w-full">
+              <span class="text-[10px] font-bold tracking-widest text-cyan-400/80 uppercase">Team 1</span>
+              <h3 id="play-team1-name" class="font-display font-extrabold text-lg text-slate-100 uppercase tracking-wide truncate mt-1">TEAM A</h3>
+            </div>
+            
+            <!-- TEAM 1 DIGITAL SCOREBOARD -->
+            <div class="bg-slate-950 border border-cyan-500/35 rounded-xl px-6 py-2.5 shadow-[0_0_15px_rgba(6,182,212,0.15)] text-center min-w-[140px]">
+              <div id="team1-score" class="font-digital text-3xl font-bold text-cyan-400 tracking-wider">000</div>
+            </div>
+
+            <!-- TEAM 1 STRIKES -->
+            <div class="flex flex-col items-center space-y-1.5 w-full">
+              <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Strikes (Tap to toggle)</span>
+              <div id="team1-strikes-wrapper" class="flex items-center space-x-2">
+                <!-- Strikes rendered dynamically -->
+              </div>
+            </div>
+
+            <!-- ACTION -->
+            <button onclick="awardPointsToTeam(1)" class="w-full py-2.5 bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-500 hover:to-teal-500 text-white font-bold text-xs rounded-xl tracking-wide transition-all shadow-md active:scale-95 flex items-center justify-center space-x-1 hover:shadow-cyan-900/30">
+              <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+              </svg>
+              <span>Award Bank to Team 1</span>
+            </button>
+          </div>
+
+          <!-- DIGITAL SCOREBOARD (Center) -->
+          <div class="lg:col-span-4 flex flex-col justify-between space-y-4">
+            <div class="bg-slate-950 border-2 border-indigo-500/30 rounded-2xl px-6 py-4 shadow-[0_0_25px_rgba(99,102,241,0.2)] text-center relative overflow-hidden flex-1 flex flex-col justify-center">
+              <div class="absolute -top-10 -left-10 w-24 h-24 bg-indigo-500/10 blur-xl rounded-full"></div>
+              <span class="text-[11px] font-semibold tracking-widest text-indigo-400 uppercase block mb-1">ROUND BANK SCORE</span>
+              <div id="round-score-display" class="font-digital text-5xl font-bold text-yellow-500 tracking-wider drop-shadow-[0_0_10px_rgba(234,179,8,0.5)] select-none">
+                000
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-2.5 justify-center items-center">
+              <button onclick="revealAllAnswers()" class="w-full sm:w-auto px-4 py-2 bg-slate-800 hover:bg-slate-700 hover:text-emerald-300 text-slate-300 border border-slate-700/60 hover:border-emerald-500/30 text-xs font-semibold rounded-xl transition-all duration-200 flex items-center justify-center space-x-2">
+                <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+                <span>Instant Reveal Remaining</span>
+              </button>
+              
+              <div class="flex flex-wrap gap-2 w-full justify-center">
+                <button onclick="clearAllRoundStrikes()" class="flex-1 sm:flex-initial px-3.5 py-2 bg-slate-900 hover:bg-slate-800 hover:text-rose-450 text-slate-400 border border-slate-800/60 text-xs font-semibold rounded-xl transition-all duration-200 flex items-center justify-center space-x-1.5">
+                  <svg class="w-4 h-4 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 8H18.5M12 2v2M12 20v2" />
+                  </svg>
+                  <span>Clear All Strikes</span>
+                </button>
+
+                <button id="btn-undo-action" onclick="undoLastAction()" class="flex-1 sm:flex-initial px-3.5 py-2 bg-slate-900 hover:bg-slate-800 hover:text-amber-450 text-slate-450 border border-slate-800/60 text-xs font-semibold rounded-xl transition-all duration-200 flex items-center justify-center space-x-1.5 opacity-40 pointer-events-none" title="Отменить последнее действие в игре">
+                  <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6" />
+                  </svg>
+                  <span>Отмена</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- TEAM 2 PANEL (Right - Pink/Rose) -->
+          <div class="lg:col-span-4 bg-slate-900/60 border border-pink-500/20 rounded-2xl p-5 flex flex-col items-center justify-between space-y-4 relative overflow-hidden group hover:border-pink-500/40 transition-all">
+            <div class="absolute top-0 right-0 w-2 h-full bg-pink-500/30"></div>
+            <div class="text-center w-full">
+              <span class="text-[10px] font-bold tracking-widest text-pink-400/80 uppercase">Team 2</span>
+              <h3 id="play-team2-name" class="font-display font-extrabold text-lg text-slate-100 uppercase tracking-wide truncate mt-1">TEAM B</h3>
+            </div>
+            
+            <!-- TEAM 2 DIGITAL SCOREBOARD -->
+            <div class="bg-slate-950 border border-pink-500/35 rounded-xl px-6 py-2.5 shadow-[0_0_15px_rgba(244,63,94,0.15)] text-center min-w-[140px]">
+              <div id="team2-score" class="font-digital text-3xl font-bold text-pink-400 tracking-wider">000</div>
+            </div>
+
+            <!-- TEAM 2 STRIKES -->
+            <div class="flex flex-col items-center space-y-1.5 w-full">
+              <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Strikes (Tap to toggle)</span>
+              <div id="team2-strikes-wrapper" class="flex items-center space-x-2">
+                <!-- Strikes rendered dynamically -->
+              </div>
+            </div>
+
+            <!-- ACTION -->
+            <button onclick="awardPointsToTeam(2)" class="w-full py-2.5 bg-gradient-to-r from-pink-600 to-rose-600 hover:from-pink-500 hover:to-rose-500 text-white font-bold text-xs rounded-xl tracking-wide transition-all shadow-md active:scale-95 flex items-center justify-center space-x-1 hover:shadow-pink-905/30">
+              <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+              </svg>
+              <span>Award Bank to Team 2</span>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- THE FAMILY FEUD BOARD -->
+        <div class="py-4">
+          <div id="board-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-5xl mx-auto px-2">
+            <!-- Dynamic 3D Card Elements loaded here -->
+          </div>
+        </div>
+
+        <!-- NAVIGATION PLAY FOOTER -->
+        <div class="border-t border-white/10 pt-8 max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 px-2">
+          
+          <button onclick="backToEditor()" class="px-5 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-slate-100 border border-slate-800 hover:border-slate-700 transition-all text-sm font-semibold flex items-center space-x-2 active:scale-95">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z" />
+            </svg>
+            <span>Return to Editor (Abort Game)</span>
+          </button>
+
+          <button id="btn-next-round" onclick="goToNextRound()" class="px-8 py-3.5 rounded-xl bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white font-bold tracking-wide transition-all duration-300 transform btn-neon flex items-center space-x-2 active:scale-95 text-base shadow-lg">
+            <span>Next Round</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </button>
+
+        </div>
+
+      </section>
+
+      <!-- SCREEN 3: GAME OVER -->
+      <section id="screen-gameover" class="hidden transition-all duration-300 max-w-3xl mx-auto space-y-8">
+        
+        <!-- Celebration Crown Logo Banner -->
+        <div class="glass-card rounded-2xl p-8 text-center space-y-6 relative overflow-hidden">
+          
+          <div class="absolute -top-16 -left-16 w-32 h-32 bg-pink-500/10 blur-2xl rounded-full"></div>
+          <div class="absolute -bottom-16 -right-16 w-32 h-32 bg-indigo-500/10 blur-2xl rounded-full"></div>
+
+          <div class="flex items-center justify-center">
+            <div class="w-20 h-20 rounded-full bg-gradient-to-br from-yellow-400 to-amber-600 border-4 border-slate-950 flex items-center justify-center shadow-[0_0_30px_rgba(245,158,11,0.4)] animate-bounce">
+              <!-- Trophy Icon SVG -->
+              <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <h2 class="text-4xl font-extrabold font-display text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-400 tracking-wider">
+              CONGRATULATIONS, CLASS!
+            </h2>
+            <p class="text-slate-400 text-sm max-w-lg mx-auto">
+              You have completed all planned Feud rounds. Here is how your vocabulary scoreboards stacked up in this session!
+            </p>
+          </div>
+
+          <!-- Celebration Winner declaration -->
+          <div id="gameover-winner-banner" class="bg-slate-950/40 border border-indigo-500/20 rounded-2xl p-6 text-center max-w-xl mx-auto">
+            <h3 id="winner-name-reveal" class="text-3xl font-extrabold font-display text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-amber-400 to-yellow-500 tracking-wide">
+              TEAM A WINS!
+            </h3>
+            <p id="winner-score-reveal" class="text-xs text-slate-300 mt-1.5 font-medium">Winning with 350 pts vs 110 pts!</p>
+          </div>
+
+          <!-- Statistics cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 border-y border-white/5 py-6 mt-4">
+            
+            <div class="text-center">
+              <span id="gameover-team1-label" class="text-[10px] font-bold tracking-widest text-cyan-400 uppercase block font-display">TEAM A</span>
+              <span id="stat-team1-score" class="text-3xl font-bold text-cyan-400 font-digital block mt-1 drop-shadow-[0_0_6px_rgba(6,182,212,0.3)]">0</span>
+            </div>
+
+            <div class="text-center border-y sm:border-y-0 sm:border-x border-white/5 py-4 sm:py-0">
+              <span id="gameover-team2-label" class="text-[10px] font-bold tracking-widest text-pink-400 uppercase block font-display">TEAM B</span>
+              <span id="stat-team2-score" class="text-3xl font-bold text-pink-400 font-digital block mt-1 drop-shadow-[0_0_6px_rgba(244,63,94,0.3)]">0</span>
+            </div>
+
+            <div class="text-center">
+              <span class="text-[10px] font-bold tracking-widest text-slate-500 uppercase block">CLEAR ROUNDS</span>
+              <span id="stat-perfect-rounds" class="text-3xl font-bold text-emerald-400 font-digital block mt-1 drop-shadow-[0_0_6px_rgba(52,211,153,0.3)]">0/2</span>
+            </div>
+
+          </div>
+
+          <!-- Section layout rounds detailed list -->
+          <div class="text-left space-y-3">
+            <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-widest">Performance Summary By Round</h4>
+            <div id="gameover-rounds-summary" class="space-y-2 max-h-[250px] overflow-y-auto pr-1">
+              <!-- Dynamically populated stats summary list -->
+            </div>
+          </div>
+
+          <!-- End controls row -->
+          <div class="pt-4 flex flex-col sm:flex-row gap-4 items-center justify-center">
+            
+            <button onclick="playAgain()" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-bold tracking-wide transition-all duration-200 shadow-lg active:scale-95 flex items-center justify-center">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 8H18.5M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1.5 12h2M20.5 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+              </svg>
+              <span>Play Array Again</span>
+            </button>
+
+            <button onclick="resetToEditor()" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700/60 transition-all font-semibold active:scale-95 flex items-center justify-center">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+              </svg>
+              <span>Reset & Edit Blanks</span>
+            </button>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+    <!-- Custom Floating Toast notifications -->
+    <div id="toast-container" class="fixed top-6 right-6 z-50 flex flex-col space-y-3 pointer-events-none"></div>
+
+    <script>
+      // GLOBAL STATE MANAGEMENT
+      let blanksList = [];
+      let activeBlankIndex = 0;
+      let editingBlankId = null;
+      let currentScreen = 'setup';
+      let editorAnswers = [];
+      let activeStrikes = [false, false, false];
+
+      // DUAL TEAM COMPETITION STATE
+      let team1Name = "Team A";
+      let team2Name = "Team B";
+      let team1Score = 0;
+      let team2Score = 0;
+      let team1Strikes = [false, false, false];
+      let team2Strikes = [false, false, false];
+      let roundBankPoints = 0; // Current round sum accumulated to distribute to either team
+
+      // UNDO GAME HISTORY SYSTEM
+      let undoHistory = [];
+      const MAX_UNDO_LIMIT = 50;
+
+      function captureGameState() {
+        try {
+          const stateSnapshot = {
+            activeBlankIndex: activeBlankIndex,
+            team1Score: team1Score,
+            team2Score: team2Score,
+            team1Strikes: [...team1Strikes],
+            team2Strikes: [...team2Strikes],
+            blanksList: JSON.parse(JSON.stringify(blanksList))
+          };
+          undoHistory.push(stateSnapshot);
+          if (undoHistory.length > MAX_UNDO_LIMIT) {
+            undoHistory.shift();
+          }
+          updateUndoButtonVisibility();
+        } catch (e) {
+          console.error("Failed to capture state:", e);
+        }
+      }
+
+      window.undoLastAction = function() {
+        if (undoHistory.length === 0) {
+          showToast("Действий для отмены пока нет!", "warning");
+          return;
+        }
+
+        const prevState = undoHistory.pop();
+
+        activeBlankIndex = prevState.activeBlankIndex;
+        team1Score = prevState.team1Score;
+        team2Score = prevState.team2Score;
+        team1Strikes = prevState.team1Strikes;
+        team2Strikes = prevState.team2Strikes;
+        blanksList = prevState.blanksList;
+
+        // Ensure we are back on the play cockpit if we were on Game Over screen
+        switchScreen('play');
+
+        // Dynamic GUI adjustments
+        renderTeamStrikes(1);
+        renderTeamStrikes(2);
+
+        const scoreT1 = document.getElementById('team1-score');
+        const scoreT2 = document.getElementById('team2-score');
+        if (scoreT1) scoreT1.textContent = String(team1Score).padStart(3, '0');
+        if (scoreT2) scoreT2.textContent = String(team2Score).padStart(3, '0');
+
+        const badge = document.getElementById('play-round-badge');
+        if (badge) badge.textContent = `ROUND ${activeBlankIndex + 1} OF ${blanksList.length}`;
+
+        const questionTitle = document.getElementById('play-question');
+        const activeBlank = blanksList[activeBlankIndex];
+        if (questionTitle && activeBlank) {
+          questionTitle.textContent = activeBlank.question;
+        }
+
+        // Re-align and show/hide NEXT/FINISH button state labels
+        const nextBtn = document.getElementById('btn-next-round');
+        if (nextBtn) {
+          if (activeBlankIndex === blanksList.length - 1) {
+            nextBtn.innerHTML = `
+              <span>Finish Game</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            `;
+          } else {
+            nextBtn.innerHTML = `
+              <span>Next Round</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            `;
+          }
+        }
+
+        renderGameBoard();
+        updateScoreboard();
+        updateUndoButtonVisibility();
+
+        playBlip();
+        showToast("Предыдущее действие успешно отменено! ⟲", "info");
+      };
+
+      function updateUndoButtonVisibility() {
+        const btn = document.getElementById('btn-undo-action');
+        if (btn) {
+          if (undoHistory.length > 0) {
+            btn.classList.remove('opacity-40', 'pointer-events-none');
+            btn.classList.add('opacity-100');
+          } else {
+            btn.classList.add('opacity-40', 'pointer-events-none');
+            btn.classList.remove('opacity-100');
+          }
+        }
+      }
+
+      // LOCAL STORAGE PERSISTENCE HANDLERS
+      function saveToLocalStorage() {
+        try {
+          localStorage.setItem('feud_blanks_list', JSON.stringify(blanksList));
+        } catch (e) {
+          console.error("Failed to save to localStorage:", e);
+        }
+      }
+
+      function loadFromLocalStorage() {
+        try {
+          const stored = localStorage.getItem('feud_blanks_list');
+          if (stored) {
+            const parsed = JSON.parse(stored);
+            if (Array.isArray(parsed) && parsed.length > 0) {
+              blanksList = parsed;
+              return true;
+            }
+          }
+        } catch (e) {
+          console.error("Failed to load from localStorage:", e);
+        }
+        return false;
+      }
+
+      window.deleteAllBlanks = function() {
+        if (confirm("Вы уверены, что хотите полностью очистить весь список раундов? Это действие удалит все бланки.")) {
+          blanksList = [];
+          saveToLocalStorage();
+          renderQueueList();
+          resetEditorForm();
+          playBuzz();
+          showToast("Все бланки и раунды очищены!", "error");
+        }
+      };
+
+      // CORE SYSTEM INITIALIZATION
+      document.addEventListener('DOMContentLoaded', () => {
+        // Try to load saved constructor questions first, if none exist load default questions
+        const hasSaved = loadFromLocalStorage();
+        if (hasSaved) {
+          renderQueueList();
+          resetEditorForm();
+          switchScreen('setup');
+          showToast("Предыдущие бланки успешно загружены из памяти!", "success");
+        } else {
+          loadDefaultQuestions();
+          resetEditorForm();
+          switchScreen('setup');
+        }
+      });
+
+      // SEED DATA LOADER
+      function loadDefaultQuestions() {
+        blanksList = [
+          {
+            id: 'blank-def-1',
+            question: "What do students do when the teacher looks away?",
+            answers: [
+              { text: "Talk to friends", points: 38, isRevealed: false },
+              { text: "Check phone / text", points: 27, isRevealed: false },
+              { text: "Draw or doodle", points: 15, isRevealed: false },
+              { text: "Eat desk snacks", points: 12, isRevealed: false },
+              { text: "Doze off / take a nap", points: 8, isRevealed: false }
+            ]
+          },
+          {
+            id: 'blank-def-2',
+            question: "Top excuses for not doing language homework",
+            answers: [
+              { text: "My dog ate my worksheet", points: 42, isRevealed: false },
+              { text: "I genuinely forgot we had any", points: 25, isRevealed: false },
+              { text: "My home internet went down", points: 18, isRevealed: false },
+              { text: "I was extremely sick", points: 10, isRevealed: false },
+              { text: "I left it in my regular classroom locker", points: 5, isRevealed: false }
+            ]
+          }
+        ];
+        renderQueueList();
+        showToast("Loaded default English classroom questions!", "success");
+      }
+
+      // 3D CHIME AUDIO SYNTHESIZER
+      // Implemented completely via Pure JS Web Audio API (as requested)
+      function playDing() {
+        try {
+          const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+          const now = audioCtx.currentTime;
+
+          // Main primary thick chime oscillator
+          const osc1 = audioCtx.createOscillator();
+          const gain1 = audioCtx.createGain();
+          osc1.type = 'sine';
+          // Sweep frequency from 440Hz upward to 880Hz over short time bounds
+          osc1.frequency.setValueAtTime(440, now);
+          osc1.frequency.exponentialRampToValueAtTime(880, now + 0.15);
+          
+          gain1.gain.setValueAtTime(0.001, now);
+          gain1.gain.linearRampToValueAtTime(0.25, now + 0.03);
+          gain1.gain.exponentialRampToValueAtTime(0.001, now + 0.3);
+
+          // Secondary harmonious high bell chime layer (perfect resonance blend)
+          const osc2 = audioCtx.createOscillator();
+          const gain2 = audioCtx.createGain();
+          osc2.type = 'triangle';
+          osc2.frequency.setValueAtTime(1100, now);
+          osc2.frequency.exponentialRampToValueAtTime(1210, now + 0.18);
+          
+          gain2.gain.setValueAtTime(0.001, now);
+          gain2.gain.linearRampToValueAtTime(0.1, now + 0.04);
+          gain2.gain.exponentialRampToValueAtTime(0.001, now + 0.25);
+
+          osc1.connect(gain1);
+          gain1.connect(audioCtx.destination);
+
+          osc2.connect(gain2);
+          gain2.connect(audioCtx.destination);
+
+          osc1.start(now);
+          osc2.start(now);
+
+          osc1.stop(now + 0.35);
+          osc2.stop(now + 0.35);
+        } catch (e) {
+          console.warn("Web Audio Context blocked or unavailable:", e);
+        }
+      }
+
+      // BUZZER AUDIO SYNTHESIZER (Optional awesome strike sound)
+      function playBuzz() {
+        try {
+          const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+          const now = audioCtx.currentTime;
+
+          const osc = audioCtx.createOscillator();
+          const gainNode = audioCtx.createGain();
+          osc.type = 'sawtooth';
+          
+          // Sawtooth drone sweeping downward for buzzer buzz feel
+          osc.frequency.setValueAtTime(120, now);
+          osc.frequency.linearRampToValueAtTime(80, now + 0.35);
+
+          gainNode.gain.setValueAtTime(0.001, now);
+          gainNode.gain.linearRampToValueAtTime(0.22, now + 0.05);
+          gainNode.gain.exponentialRampToValueAtTime(0.001, now + 0.38);
+
+          osc.connect(gainNode);
+          gainNode.connect(audioCtx.destination);
+
+          osc.start(now);
+          osc.stop(now + 0.42);
+        } catch (e) {
+          console.warn(e);
+        }
+      }
+
+      // SHORT BLIP FOR STRIKE TOGGLE OFF
+      function playBlip() {
+        try {
+          const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+          const osc = audioCtx.createOscillator();
+          const gainNode = audioCtx.createGain();
+          
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(400, audioCtx.currentTime);
+
+          gainNode.gain.setValueAtTime(0.01, audioCtx.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.1);
+
+          osc.connect(gainNode);
+          gainNode.connect(audioCtx.destination);
+
+          osc.start();
+          osc.stop(audioCtx.currentTime + 0.12);
+        } catch (e) {
+          console.warn(e);
+        }
+      }
+
+      // SMOOTH SCREEN TRANSITIONS
+      function switchScreen(screenName) {
+        const screens = {
+          setup: document.getElementById('screen-setup'),
+          play: document.getElementById('screen-play'),
+          gameover: document.getElementById('screen-gameover')
+        };
+        
+        const currentElem = screens[currentScreen];
+        if (currentElem && currentScreen !== screenName) {
+          currentElem.classList.add('opacity-0', 'scale-95');
+          currentElem.classList.remove('opacity-100', 'scale-100');
+          setTimeout(() => {
+            currentElem.classList.add('hidden');
+            
+            currentScreen = screenName;
+            const newElem = screens[screenName];
+            newElem.classList.remove('hidden');
+            setTimeout(() => {
+              newElem.classList.remove('opacity-0', 'scale-95');
+              newElem.classList.add('opacity-100', 'scale-100');
+            }, 30);
+          }, 300);
+        } else {
+          currentScreen = screenName;
+          Object.keys(screens).forEach(key => {
+            if (key === screenName) {
+              screens[key].classList.remove('hidden', 'opacity-0', 'scale-95');
+              screens[key].classList.add('opacity-100', 'scale-100');
+            } else {
+              screens[key].classList.add('hidden', 'opacity-0', 'scale-95');
+            }
+          });
+        }
+      }
+
+      // FLOATING TRANSIENT TOAST SYSTEM
+      function showToast(message, type = "info") {
+        const container = document.getElementById('toast-container');
+        if (!container) return;
+        
+        const toast = document.createElement('div');
+        toast.className = `transform translate-y-2 opacity-0 transition-all duration-300 pointer-events-auto flex items-center p-4 rounded-xl shadow-lg border backdrop-blur-md min-w-[300px] max-w-sm`;
+        
+        if (type === 'error') {
+          toast.className += ' bg-rose-950/80 border-rose-500/30 text-rose-200 shadow-rose-900/10';
+        } else if (type === 'success') {
+          toast.className += ' bg-emerald-950/80 border-emerald-500/30 text-emerald-200 shadow-emerald-900/10';
+        } else if (type === 'warning') {
+          toast.className += ' bg-amber-950/80 border-amber-500/30 text-amber-200 shadow-amber-900/10';
+        } else {
+          toast.className += ' bg-indigo-950/80 border-indigo-500/30 text-indigo-200 shadow-indigo-900/10';
+        }
+        
+        let icon = '';
+        if (type === 'error') {
+          icon = `<svg class="w-5 h-5 mr-3 shrink-0 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>`;
+        } else if (type === 'success') {
+          icon = `<svg class="w-5 h-5 mr-3 shrink-0 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>`;
+        } else if (type === 'warning') {
+          icon = `<svg class="w-5 h-5 mr-3 shrink-0 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>`;
+        } else {
+          icon = `<svg class="w-5 h-5 mr-3 shrink-0 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>`;
+        }
+        
+        toast.innerHTML = `
+          ${icon}
+          <div class="flex-1 text-xs font-semibold pr-2">${message}</div>
+          <button onclick="this.parentElement.remove()" class="text-slate-400 hover:text-slate-100 text-lg leading-none">&times;</button>
+        `;
+        
+        container.appendChild(toast);
+        
+        setTimeout(() => {
+          toast.classList.remove('translate-y-2', 'opacity-0');
+        }, 10);
+        
+        setTimeout(() => {
+          toast.classList.add('opacity-0', 'translate-y-[-10px]');
+          setTimeout(() => {
+            toast.remove();
+          }, 300);
+        }, 3500);
+      }
+
+      // SCREEN 1 FORM & ROW DEVELOPER
+      window.resetEditorForm = function() {
+        editingBlankId = null;
+        
+        const qInput = document.getElementById('editor-question');
+        if (qInput) qInput.value = "";
+
+        // Standard 4 clear row values
+        editorAnswers = [
+          { text: "", points: 40 },
+          { text: "", points: 25 },
+          { text: "", points: 15 },
+          { text: "", points: 10 }
+        ];
+
+        const formTitle = document.getElementById('editor-form-title');
+        if (formTitle) formTitle.textContent = "Develop New Round";
+
+        const saveBtn = document.getElementById('btn-save-blank');
+        if (saveBtn) {
+          saveBtn.innerHTML = `
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+            <span>Add Round to Queue</span>
+          `;
+        }
+
+        renderEditorAnswers();
+      };
+
+      function renderEditorAnswers() {
+        const container = document.getElementById('editor-answers-list');
+        if (!container) return;
+        
+        container.innerHTML = "";
+        
+        editorAnswers.forEach((ans, idx) => {
+          const row = document.createElement('div');
+          row.className = "flex items-center space-x-3 bg-slate-950/40 p-3 rounded-xl border border-white/5 shadow-inner transition-colors duration-200 hover:border-indigo-500/20";
+          
+          row.innerHTML = `
+            <div class="flex items-center justify-center w-8 h-8 rounded-full bg-slate-800 text-indigo-300 font-bold text-sm border border-indigo-500/20 select-none">
+              ${idx + 1}
+            </div>
+            <div class="flex-1 min-w-0">
+              <input type="text" value="${ans.text}" placeholder="e.g. Chat with friends" 
+                class="w-full bg-slate-900/80 border border-slate-800 rounded-lg px-3 py-2 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:border-indigo-500" 
+                oninput="updateEditorRowText(${idx}, this.value)" />
+            </div>
+            <div class="w-24">
+              <input type="number" min="0" max="100" value="${ans.points}" placeholder="Pts"
+                class="w-full bg-slate-900/80 border border-slate-800 rounded-lg px-2 py-2 text-sm text-slate-100 text-center focus:outline-none focus:border-indigo-500" 
+                oninput="updateEditorRowPoints(${idx}, this.value)" />
+            </div>
+            <div class="flex items-center justify-center w-10">
+              ${editorAnswers.length > 3 ? `
+                <button type="button" onclick="deleteEditorRow(${idx})" class="p-2 text-slate-500 hover:text-rose-400 rounded-lg hover:bg-rose-500/10 transition-colors" title="Delete Option">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                  </svg>
+                </button>
+              ` : `
+                <div class="w-8"></div>
+              `}
+            </div>
+          `;
+          container.appendChild(row);
+        });
+      }
+
+      window.updateEditorRowText = function(idx, val) {
+        if (editorAnswers[idx]) {
+          editorAnswers[idx].text = val;
+        }
+      };
+
+      window.updateEditorRowPoints = function(idx, val) {
+        if (editorAnswers[idx]) {
+          let num = parseInt(val, 10);
+          if (isNaN(num)) num = 0;
+          editorAnswers[idx].points = num;
+        }
+      };
+
+      window.deleteEditorRow = function(idx) {
+        if (editorAnswers.length <= 3) return;
+        editorAnswers.splice(idx, 1);
+        renderEditorAnswers();
+      };
+
+      window.addEditorRow = function() {
+        if (editorAnswers.length >= 8) {
+          showToast("Maximum of 8 answer options allowed per blank!", "warning");
+          return;
+        }
+        let lastPoints = 15;
+        if (editorAnswers.length > 0) {
+          lastPoints = Math.max(5, editorAnswers[editorAnswers.length - 1].points - 5);
+        }
+        editorAnswers.push({ text: "", points: lastPoints });
+        renderEditorAnswers();
+      };
+
+      // QUEUE SAVER CONSTRUCTOR
+      window.saveCurrentBlank = function() {
+        const qInput = document.getElementById('editor-question');
+        if (!qInput) return;
+        
+        const questionText = qInput.value.trim();
+        if (!questionText) {
+          showToast("Please write a clue question!", "error");
+          return;
+        }
+
+        const validAnswers = [];
+        for (let i = 0; i < editorAnswers.length; i++) {
+          const ansText = editorAnswers[i].text.trim();
+          const ansPoints = editorAnswers[i].points;
+
+          if (!ansText) {
+            showToast(`Answer option #${i + 1} cannot be completely empty!`, "error");
+            return;
+          }
+          validAnswers.push({
+            text: ansText,
+            points: ansPoints,
+            isRevealed: false
+          });
+        }
+
+        // Standard weight descending sorted triggers
+        validAnswers.sort((a, b) => b.points - a.points);
+
+        if (editingBlankId) {
+          // Edit existing loaded round
+          const targetIdx = blanksList.findIndex(b => b.id === editingBlankId);
+          if (targetIdx !== -1) {
+            blanksList[targetIdx].question = questionText;
+            blanksList[targetIdx].answers = validAnswers;
+            showToast("Feud round updated successfully!", "success");
+          } else {
+            blanksList.push({
+              id: 'round-' + Date.now(),
+              question: questionText,
+              answers: validAnswers
+            });
+            showToast("Added as a new round!", "success");
+          }
+        } else {
+          // Save outright new round to game sequence queue
+          blanksList.push({
+            id: 'round-' + Date.now(),
+            question: questionText,
+            answers: validAnswers
+          });
+          showToast("New round compiled into sequence list!", "success");
+        }
+
+        resetEditorForm();
+        renderQueueList();
+        saveToLocalStorage();
+      };
+
+      // RENDERS QUEUE SEQUENCER (Right Column)
+      function renderQueueList() {
+        const container = document.getElementById('queue-items-list');
+        if (!container) return;
+
+        if (blanksList.length === 0) {
+          container.innerHTML = `
+            <div class="flex flex-col items-center justify-center py-16 px-4 border border-dashed border-slate-700 rounded-xl bg-slate-950/20 text-center text-slate-500">
+              <svg class="w-10 h-10 mb-2 text-indigo-400/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 01-2-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+              </svg>
+              <span class="text-sm font-semibold text-slate-400">Constructor Queue Empty</span>
+              <span class="text-xs text-slate-600 max-w-[240px] mt-1">Develop clue items on the left side to compile your sequence.</span>
+            </div>
+          `;
+          return;
+        }
+
+        container.innerHTML = "";
+        
+        blanksList.forEach((b, idx) => {
+          const totalPointsVal = b.answers.reduce((s, o) => s + (parseInt(o.points, 10) || 0), 0);
+          const isCurrentInEditor = (editingBlankId === b.id);
+
+          const card = document.createElement('div');
+          card.className = `p-4 rounded-xl border transition-all duration-200 ${isCurrentInEditor ? 'bg-indigo-950/30 border-indigo-500 shadow-[0_0_15px_rgba(99,102,241,0.2)]' : 'bg-slate-950/40 border-slate-850 hover:border-slate-800'}`;
+
+          card.innerHTML = `
+            <div class="flex items-start justify-between space-x-3">
+              <div class="min-w-0 flex-1">
+                <div class="flex items-center space-x-2 mb-1.5 flex-wrap gap-y-1">
+                  <span class="text-[10px] font-bold font-display uppercase tracking-widest text-indigo-400">Round ${idx + 1}</span>
+                  <span class="text-[9px] px-2 py-0.5 rounded-full bg-slate-900 border border-slate-800 text-slate-400">${b.answers.length} Options</span>
+                  <span class="text-[9px] px-2 py-0.5 rounded-full bg-emerald-950/40 text-emerald-400 border border-emerald-900/40 font-semibold">${totalPointsVal} Pts</span>
+                </div>
+                <h4 class="font-bold text-slate-100 text-sm truncate" title="${b.question}">${b.question}</h4>
+              </div>
+
+              <!-- Reorder Operations -->
+              <div class="flex items-center space-x-1 shrink-0">
+                <button onclick="moveQueueItem(${idx}, -1)" ${idx === 0 ? 'disabled class="p-1 text-slate-700 cursor-not-allowed"' : 'class="p-1 text-slate-400 hover:text-indigo-400 rounded-lg hover:bg-slate-800 transition-colors"'} title="Move Up">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7" />
+                  </svg>
+                </button>
+                <button onclick="moveQueueItem(${idx}, 1)" ${idx === blanksList.length - 1 ? 'disabled class="p-1 text-slate-700 cursor-not-allowed"' : 'class="p-1 text-slate-400 hover:text-indigo-400 rounded-lg hover:bg-slate-800 transition-colors"'} title="Move Down">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <button onclick="editQueueItem('${b.id}')" class="p-1 text-slate-400 hover:text-amber-400 rounded-lg hover:bg-slate-800 transition-colors" title="Edit details">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                  </svg>
+                </button>
+                <button onclick="deleteQueueItem(${idx})" class="p-1 text-slate-450 hover:text-rose-400 rounded-lg hover:bg-rose-500/10 transition-colors" title="Delete core round">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                  </svg>
+                </button>
+              </div>
+
+            </div>
+          `;
+          container.appendChild(card);
+        });
+      }
+
+      window.moveQueueItem = function(idx, dir) {
+        const dest = idx + dir;
+        if (dest < 0 || dest >= blanksList.length) return;
+
+        const temp = blanksList[idx];
+        blanksList[idx] = blanksList[dest];
+        blanksList[dest] = temp;
+
+        renderQueueList();
+        saveToLocalStorage();
+        showToast("Rounds sequence order updated!", "info");
+      };
+
+      window.editQueueItem = function(id) {
+        const b = blanksList.find(r => r.id === id);
+        if (!b) return;
+
+        editingBlankId = id;
+
+        const qInput = document.getElementById('editor-question');
+        if (qInput) qInput.value = b.question;
+
+        editorAnswers = b.answers.map(o => ({
+          text: o.text,
+          points: o.points
+        }));
+
+        const formTitle = document.getElementById('editor-form-title');
+        if (formTitle) formTitle.textContent = "Edit Round Development";
+
+        const saveBtn = document.getElementById('btn-save-blank');
+        if (saveBtn) {
+          saveBtn.innerHTML = `
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Update Round Details</span>
+          `;
+        }
+
+        renderEditorAnswers();
+        renderQueueList();
+
+        document.getElementById('editor-question').scrollIntoView({ behavior: 'smooth' });
+      };
+
+      // TEMPLATE & BULK IMPORT MANAGEMENT
+      window.loadBuiltInTemplate = function() {
+        const sampleText = `We asked 100 teenagers: "What is the worst personality trait a friend can have?"
+selfish
+dishonest
+unkind
+impolite
+talkative
+impatient
+disorganized
+
+We asked 100 teenagers:
+"Which job would you never want to do?"
+cleaner
+dentist
+firefighter
+journalist
+engineer
+hairdresser
+architect
+
+🎤  We asked 100 people: "How would you describe a dream job?"
+well-paid
+exciting
+safe
+challenging
+easy
+dangerous
+badly paid
+
+🎤  We asked 100 students:
+"What is the worst thing that can happen at school?"
+fail an exam
+get a bad mark
+do badly at school
+copy someone's work
+hand in homework late
+come to school late
+skip school
+
+🎤  We asked 100 students:
+"What do you need to do to get good results at school?"
+revise for an exam
+hand in homework on time
+take notes
+do well at school
+get a good mark
+pass an exam
+take an exam
+
+🎤  We asked 100 teenagers: "What would you love to do before you turn 18?"
+meet a famous person
+do a parachute jump
+go scuba diving
+win a competition
+stay in a castle
+ride a camel
+learn to ski`;
+
+        const res = parseTemplateTextAndAddToQueue(sampleText, false);
+        if (res.success) {
+          renderQueueList();
+          playDing();
+          showToast(`6 template rounds successfully loaded and added to Queue! 🎉`, "success");
+        } else {
+          showToast(`Error: ${res.error}`, "error");
+        }
+      };
+
+      window.toggleImportArea = function() {
+        const container = document.getElementById('import-area-container');
+        if (!container) return;
+        if (container.classList.contains('hidden')) {
+          container.classList.remove('hidden');
+          container.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          container.classList.add('hidden');
+        }
+        playBlip();
+      };
+
+      window.copyAIPromptToClipboard = function() {
+        const label = document.getElementById('copy-prompt-label');
+        const preview = document.getElementById('ai-prompt-preview');
+        if (!preview) return;
+
+        navigator.clipboard.writeText(preview.textContent).then(() => {
+          if (label) {
+            label.textContent = "Copied! 👍";
+            setTimeout(() => {
+              label.textContent = "Copy ChatGPT Prompt Instruction";
+            }, 2500);
+          }
+          showToast("AI template recipe copied to clipboard! Paste it to ChatGPT/Gemini.", "success");
+          playBlip();
+        }).catch(err => {
+          showToast("Failed to copy automatically, please select and copy manually.", "warning");
+        });
+      };
+
+      window.executeImport = function() {
+        const textarea = document.getElementById('import-textarea');
+        if (!textarea || !textarea.value.trim()) {
+          showToast("Please paste some themed text first!", "warning");
+          return;
+        }
+
+        const res = parseTemplateTextAndAddToQueue(textarea.value, false);
+        if (res.success) {
+          renderQueueList();
+          textarea.value = "";
+          const container = document.getElementById('import-area-container');
+          if (container) container.classList.add('hidden');
+          playDing();
+          showToast(`Successfully imported ${res.count} custom rounds to Queue! 🚀`, "success");
+        } else {
+          showToast(res.error || "Failed to parse questions. Please check the format.", "error");
+        }
+      };
+
+      function parseTemplateTextAndAddToQueue(text, clearQueueBeforeAdding = false) {
+        if (!text || !text.trim()) {
+          return { success: false, count: 0, error: "Empty template text!" };
+        }
+
+        const lines = text.split('\n').map(l => l.trim());
+        const rounds = [];
+        let currentRound = null;
+
+        for (let i = 0; i < lines.length; i++) {
+          const line = lines[i];
+          if (!line) {
+            continue;
+          }
+
+          const lowerLine = line.toLowerCase();
+          const isQuestionLine = 
+            lowerLine.includes("we asked") || 
+            line.includes("?") || 
+            line.includes("🎤") || 
+            (line.startsWith('"') && line.endsWith('"') && line.length > 15);
+
+          if (isQuestionLine) {
+            if (currentRound && currentRound.answers.length > 0) {
+              rounds.push(currentRound);
+            }
+            
+            let questionText = line
+              .replace(/^[🎤\s•\-\d\.\)]+/g, '')
+              .trim();
+
+            if (i + 1 < lines.length) {
+              const nextLine = lines[i+1].trim();
+              if (nextLine.startsWith('"') && nextLine.includes('?') && !nextLine.toLowerCase().includes("we asked")) {
+                questionText = questionText + " " + nextLine;
+                i++;
+              }
+            }
+
+            questionText = questionText.replace(/^["'«“]/, '').replace(/["'»”]$/, '').trim();
+
+            currentRound = {
+              question: questionText,
+              answers: []
+            };
+          } else {
+            if (currentRound) {
+              let ansText = line.replace(/^[•\-\d\.\)\s_]+/g, '').trim();
+              
+              let points = null;
+              const pointsMatch = ansText.match(/[\s\(\-\:]+(\d+)\s*\)?$/);
+              if (pointsMatch) {
+                points = parseInt(pointsMatch[1], 10);
+                ansText = ansText.substring(0, ansText.lastIndexOf(pointsMatch[0])).trim();
+              }
+
+              ansText = ansText.replace(/^["'«“]/, '').replace(/["'»”]$/, '').trim();
+
+              if (ansText.length > 0) {
+                currentRound.answers.push({
+                  text: ansText,
+                  points: points
+                });
+              }
+            } else {
+              currentRound = {
+                question: "General Trivia Category",
+                answers: []
+              };
+              let ansText = line.replace(/^[•\-\d\.\)\s_]+/g, '').trim();
+              currentRound.answers.push({ text: ansText, points: null });
+            }
+          }
+        }
+
+        if (currentRound && currentRound.answers.length > 0) {
+          rounds.push(currentRound);
+        }
+
+        if (rounds.length === 0) {
+          return { success: false, count: 0, error: "Could not find any valid rounds to import. Ensure your questions contain 'We asked' or a question mark." };
+        }
+
+        const fallbackCurves = {
+          1: [100],
+          2: [62, 38],
+          3: [52, 30, 18],
+          4: [46, 26, 17, 11],
+          5: [40, 24, 16, 12, 8],
+          6: [38, 22, 16, 11, 8, 5],
+          7: [35, 20, 15, 12, 8, 6, 4],
+          8: [30, 20, 15, 12, 9, 7, 5, 2]
+        };
+
+        const parsedRounds = rounds.map((r, rIdx) => {
+          const totalAnswers = r.answers.length;
+          const curve = fallbackCurves[Math.min(totalAnswers, 8)] || [25, 20, 15, 12, 10, 8, 6, 4];
+          
+          const formattedAnswers = r.answers.map((a, aIdx) => {
+            let pts = a.points;
+            if (pts === null || isNaN(pts)) {
+              pts = curve[aIdx] || Math.max(2, 10 - aIdx);
+            }
+            return {
+              text: a.text,
+              points: pts,
+              isRevealed: false,
+              isAwarded: false
+            };
+          });
+
+          return {
+            id: "blank-imported-" + Date.now() + "-" + rIdx + "-" + Math.floor(Math.random() * 1000),
+            question: r.question,
+            answers: formattedAnswers
+          };
+        });
+
+        if (clearQueueBeforeAdding) {
+          blanksList = [];
+        }
+
+        blanksList = [...blanksList, ...parsedRounds];
+        saveToLocalStorage();
+        return { success: true, count: parsedRounds.length };
+      }
+
+      window.deleteQueueItem = function(idx) {
+        const deleted = blanksList.splice(idx, 1)[0];
+        if (deleted && editingBlankId === deleted.id) {
+          resetEditorForm();
+        }
+        renderQueueList();
+        saveToLocalStorage();
+        showToast("Round deleted from sequence list", "warning");
+      };
+
+      // GAME LAUNCH ROUTER
+      window.startGameSession = function() {
+        if (blanksList.length === 0) {
+          showToast("Cannot launch. Add at least 1 round to queue!", "error");
+          return;
+        }
+
+        // Reset undo history
+        undoHistory = [];
+        updateUndoButtonVisibility();
+
+        // Pull Team Names from Screen 1 Inputs with safe default fallbacks
+        const input1 = document.getElementById('team1-name-input');
+        const input2 = document.getElementById('team2-name-input');
+        team1Name = (input1 && input1.value.trim()) ? input1.value.trim() : "Team A";
+        team2Name = (input2 && input2.value.trim()) ? input2.value.trim() : "Team B";
+
+        // Reset cumulative scores
+        team1Score = 0;
+        team2Score = 0;
+
+        // Reset display names & scores dynamically in play cockpit
+        const playName1 = document.getElementById('play-team1-name');
+        const playName2 = document.getElementById('play-team2-name');
+        if (playName1) playName1.textContent = team1Name;
+        if (playName2) playName2.textContent = team2Name;
+
+        const scoreT1 = document.getElementById('team1-score');
+        const scoreT2 = document.getElementById('team2-score');
+        if (scoreT1) scoreT1.textContent = "000";
+        if (scoreT2) scoreT2.textContent = "000";
+
+        activeBlankIndex = 0;
+        // Wipe all reveal flags for pure replay accuracy and reset harvested state
+        blanksList.forEach(b => {
+          b.pointsHarvested = false;
+          b.answers.forEach(o => {
+            o.isRevealed = false;
+            o.isAwarded = false;
+          });
+        });
+
+        switchScreen('play');
+        initRound();
+        showToast(`Classroom Feud launched! Good luck, ${team1Name} & ${team2Name}!`, "success");
+      };
+
+      // TEAM STRIKES RENDERER
+      function renderTeamStrikes(teamNum) {
+        const wrapperId = (teamNum === 1) ? 'team1-strikes-wrapper' : 'team2-strikes-wrapper';
+        const strikesArray = (teamNum === 1) ? team1Strikes : team2Strikes;
+        const container = document.getElementById(wrapperId);
+        if (!container) return;
+
+        container.innerHTML = "";
+        strikesArray.forEach((hasStrike, idx) => {
+          const box = document.createElement('div');
+          box.className = `w-11 h-11 rounded-xl flex items-center justify-center cursor-pointer border-2 transition-all duration-300 ${hasStrike ? 'bg-rose-950/70 border-rose-500 text-rose-500 shadow-[0_0_15px_rgba(239,68,68,0.45)]' : 'bg-slate-900 border-slate-800 text-slate-800 hover:border-slate-700'}`;
+          box.innerHTML = `<span class="font-display font-extrabold text-xl select-none">X</span>`;
+
+          box.addEventListener('click', () => {
+            captureGameState();
+            strikesArray[idx] = !strikesArray[idx];
+            if (strikesArray[idx]) {
+              playBuzz();
+              showToast(`${(teamNum === 1) ? team1Name : team2Name} Strike ${idx + 1} logged!`, "error");
+            } else {
+              playBlip();
+            }
+            renderTeamStrikes(teamNum);
+          });
+
+          container.appendChild(box);
+        });
+      }
+
+      // CLEAR STRIKES FOR BOTH TEAMS
+      window.clearAllRoundStrikes = function() {
+        captureGameState();
+        team1Strikes = [false, false, false];
+        team2Strikes = [false, false, false];
+        renderTeamStrikes(1);
+        renderTeamStrikes(2);
+        playBlip();
+        showToast("All active strikes reset for the current round!", "info");
+      };
+
+      // AWARD POINTS TO CHOSEN TEAM
+      window.awardPointsToTeam = function(teamNum) {
+        const activeBlank = blanksList[activeBlankIndex];
+        if (!activeBlank) return;
+
+        // Calculate current bank - sum of revealed but NOT yet awarded answers
+        const currentRoundSum = activeBlank.answers
+          .filter(o => o.isRevealed && !o.isAwarded)
+          .reduce((sum, o) => sum + (parseInt(o.points, 10) || 0), 0);
+        
+        if (currentRoundSum === 0) {
+          showToast("Bank score is currently 0. Reveal some correct answers first!", "warning");
+          return;
+        }
+
+        captureGameState();
+
+        // Safe transfer and count rollup animation
+        if (teamNum === 1) {
+          team1Score += currentRoundSum;
+          const scoreElem = document.getElementById('team1-score');
+          if (scoreElem) {
+            animateCountScore(scoreElem, team1Score);
+          }
+          showToast(`Awarded ${currentRoundSum} Points to ${team1Name}!`, "success");
+        } else {
+          team2Score += currentRoundSum;
+          const scoreElem = document.getElementById('team2-score');
+          if (scoreElem) {
+            animateCountScore(scoreElem, team2Score);
+          }
+          showToast(`Awarded ${currentRoundSum} Points to ${team2Name}!`, "success");
+        }
+
+        // Mark currently revealed answers as awarded so they are no longer counted
+        activeBlank.answers.forEach(o => {
+          if (o.isRevealed) {
+            o.isAwarded = true;
+          }
+        });
+        
+        // Custom celebratory mini-tune
+        playDing();
+        setTimeout(() => {
+          playDing();
+        }, 150);
+
+        // Scoreboard resets to reflect no more unawarded points
+        updateScoreboard();
+      };
+
+      // PLAY SCREEN INITS
+      function initRound() {
+        const activeBlank = blanksList[activeBlankIndex];
+        if (!activeBlank) return;
+
+        // Reset strike tracker lists
+        team1Strikes = [false, false, false];
+        team2Strikes = [false, false, false];
+        renderTeamStrikes(1);
+        renderTeamStrikes(2);
+
+        // Make sure points harvested indicator is fresh for round
+        activeBlank.pointsHarvested = false;
+
+        const badge = document.getElementById('play-round-badge');
+        if (badge) badge.textContent = `ROUND ${activeBlankIndex + 1} OF ${blanksList.length}`;
+
+        const questionTitle = document.getElementById('play-question');
+        if (questionTitle) questionTitle.textContent = activeBlank.question;
+
+        // Reset scoreboard numeric visuals to 000
+        const display = document.getElementById('round-score-display');
+        if (display) display.textContent = "000";
+
+        renderGameBoard();
+        updateScoreboard();
+
+        // Control button dynamic label
+        const nextBtn = document.getElementById('btn-next-round');
+        if (nextBtn) {
+          if (activeBlankIndex === blanksList.length - 1) {
+            nextBtn.innerHTML = `
+              <span>Finish Game</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            `;
+          } else {
+            nextBtn.innerHTML = `
+              <span>Next Round</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            `;
+          }
+        }
+      }
+
+      function renderGameBoard() {
+        const container = document.getElementById('board-grid');
+        if (!container) return;
+
+        const activeBlank = blanksList[activeBlankIndex];
+        if (!activeBlank) return;
+
+        const answers = activeBlank.answers;
+
+        // Visual density arrangement columns check (answers > 4 renders dual column structure)
+        if (answers.length > 4) {
+          container.className = "grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-5xl mx-auto px-2";
+        } else {
+          container.className = "grid grid-cols-1 gap-4 w-full max-w-2xl mx-auto px-2";
+        }
+
+        container.innerHTML = "";
+
+        answers.forEach((ans, idx) => {
+          const outer = document.createElement('div');
+          outer.className = "perspective-1000 h-20 md:h-24 w-full cursor-pointer group";
+
+          const inner = document.createElement('div');
+          inner.className = "relative w-full h-full duration-700 ease-in-out preserve-3d transition-transform";
+          if (ans.isRevealed) {
+            inner.classList.add('rotate-y-180');
+          }
+
+          // FRONT / CLOSED SIDE (Gray/slate block with Feud index)
+          const front = document.createElement('div');
+          front.className = "front-face absolute inset-0 w-full h-full rounded-2xl flex items-center justify-between px-6 bg-slate-900 border border-indigo-500/20 hover:border-indigo-400/50 text-white shadow-lg backface-hidden transition-all duration-300 transform select-none hover:-translate-y-0.5 group-hover:shadow-[0_0_20px_rgba(99,102,241,0.25)]";
+          if (ans.isRevealed) {
+            front.classList.add('opacity-0', 'pointer-events-none');
+          } else {
+            front.classList.add('opacity-100');
+          }
+          
+          front.innerHTML = `
+            <div class="flex items-center space-x-4">
+              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center font-bold text-lg text-white shadow-[0_0_15px_rgba(99,102,241,0.55)] group-hover:scale-110 duration-200">
+                ${idx + 1}
+              </div>
+              <span class="text-slate-500 text-sm md:text-base tracking-widest font-semibold font-display uppercase select-none">•••••••••••••</span>
+            </div>
+            <div class="text-indigo-400/20 font-extrabold text-sm font-display tracking-widest">FEUD</div>
+          `;
+
+          // BACK / REVEALED OPENED SIDE (Correct answers in green, shown when flipped)
+          const back = document.createElement('div');
+          back.className = "back-face absolute inset-0 w-full h-full rounded-2xl flex items-center justify-between px-6 bg-gradient-to-r from-emerald-950/90 to-teal-900/90 border border-emerald-400/40 text-white shadow-[0_0_25px_rgba(16,185,129,0.25)] backface-hidden rotate-y-180 select-none transition-all duration-300";
+          if (ans.isRevealed) {
+            back.classList.add('opacity-100');
+            back.classList.remove('opacity-0', 'pointer-events-none');
+          } else {
+            back.classList.add('opacity-0', 'pointer-events-none');
+          }
+
+          back.innerHTML = `
+            <div class="flex items-center space-x-3 truncate">
+              <div class="w-7 h-7 rounded-full bg-emerald-500/20 flex items-center justify-center font-bold text-sm text-emerald-300 border border-emerald-400/40 shrink-0">
+                ✓
+              </div>
+              <span class="font-bold text-base md:text-xl uppercase tracking-wider text-emerald-100 truncate font-display">${ans.text}</span>
+            </div>
+            <div class="flex items-center shrink-0 ml-3">
+              <div class="px-3.5 py-1.5 rounded-xl bg-slate-950 text-emerald-300 border border-emerald-500/35 font-digital text-lg md:text-2xl font-bold min-w-16 text-center shadow-inner">
+                ${ans.points}
+              </div>
+            </div>
+          `;
+
+          inner.appendChild(front);
+          inner.appendChild(back);
+          outer.appendChild(inner);
+
+          // Reveal Flip interaction
+          outer.addEventListener('click', () => {
+            if (!ans.isRevealed) {
+              revealSingleCard(idx, inner);
+            }
+          });
+
+          container.appendChild(outer);
+        });
+      }
+
+      function revealSingleCard(idx, innerElem) {
+        const activeBlank = blanksList[activeBlankIndex];
+        if (!activeBlank) return;
+
+        captureGameState();
+        activeBlank.answers[idx].isRevealed = true;
+        
+        // Flip visually
+        if (innerElem) {
+          innerElem.classList.add('rotate-y-180');
+          
+          // Smoothly toggle the active element opacity layer fallbacks
+          const frontFace = innerElem.querySelector('.front-face');
+          const backFace = innerElem.querySelector('.back-face');
+          if (frontFace && backFace) {
+            frontFace.classList.add('opacity-0', 'pointer-events-none');
+            backFace.classList.remove('opacity-0', 'pointer-events-none');
+            backFace.classList.add('opacity-100');
+          }
+        }
+
+        // Trigger chimes
+        playDing();
+
+        // Increment Score Board
+        updateScoreboard();
+      }
+
+      function updateScoreboard() {
+        const activeBlank = blanksList[activeBlankIndex];
+        if (!activeBlank) return;
+
+        // Compute bank from revealed but unearned answers
+        const currentRoundSum = activeBlank.answers
+          .filter(o => o.isRevealed && !o.isAwarded)
+          .reduce((sum, o) => sum + (parseInt(o.points, 10) || 0), 0);
+
+        const scoreElem = document.getElementById('round-score-display');
+        if (scoreElem) {
+          animateCountScore(scoreElem, currentRoundSum);
+        }
+      }
+
+      // Smooth retro scoreboard digitization rollup
+      function animateCountScore(element, targetValue) {
+        const startValue = parseInt(element.textContent, 10) || 0;
+        if (startValue === targetValue) return;
+
+        const duration = 500; // ms
+        const startTime = performance.now();
+
+        function count(time) {
+          const elapsed = time - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const easeOutQuad = progress * (2 - progress);
+
+          const curVal = Math.floor(startValue + (targetValue - startValue) * easeOutQuad);
+          element.textContent = String(curVal).padStart(3, '0');
+
+          if (progress < 1) {
+            requestAnimationFrame(count);
+          } else {
+            element.textContent = String(targetValue).padStart(3, '0');
+          }
+        }
+        requestAnimationFrame(count);
+      }
+
+
+
+      // ROUND FLUX ROUTER
+      window.revealAllAnswers = function() {
+        const activeBlank = blanksList[activeBlankIndex];
+        if (!activeBlank) return;
+
+        let newlyRevealed = false;
+        activeBlank.answers.forEach((ans, idx) => {
+          if (!ans.isRevealed) {
+            newlyRevealed = true;
+          }
+        });
+
+        if (newlyRevealed) {
+          captureGameState();
+          activeBlank.answers.forEach((ans, idx) => {
+            ans.isRevealed = true;
+          });
+          playDing();
+          // Update game board visual divs
+          renderGameBoard();
+          updateScoreboard();
+          showToast("Revealed all remaining options!", "success");
+        }
+      };
+
+      window.goToNextRound = function() {
+        if (activeBlankIndex < blanksList.length - 1) {
+          captureGameState();
+          activeBlankIndex++;
+          initRound();
+          showToast(`Initializing Round ${activeBlankIndex + 1}...`, "info");
+        } else {
+          // Transition past finals boundary to Screen 3
+          captureGameState();
+          showGameOverSessionScreen();
+        }
+      };
+
+      window.backToEditor = function() {
+        switchScreen('setup');
+        showToast("Returned safely to planning stage", "info");
+      };
+
+      // GAME OVER STATE
+      function showGameOverSessionScreen() {
+        renderGameOverStats();
+        switchScreen('gameover');
+        playCelebratoryHornFanfare();
+      }
+
+      function playCelebratoryHornFanfare() {
+        try {
+          const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+          const arpeggio = [261.63, 311.13, 392.00, 523.25, 587.33, 783.99, 1046.50]; // Minor with C major finish
+          const now = audioCtx.currentTime;
+
+          arpeggio.forEach((elemFreq, i) => {
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            
+            osc.type = 'triangle';
+            osc.frequency.setValueAtTime(elemFreq, now + i * 0.08);
+
+            gain.gain.setValueAtTime(0.001, now + i * 0.08);
+            gain.gain.linearRampToValueAtTime(0.12, now + i * 0.08 + 0.02);
+            gain.gain.exponentialRampToValueAtTime(0.001, now + i * 0.08 + 0.4);
+
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+
+            osc.start(now + i * 0.08);
+            osc.stop(now + i * 0.08 + 0.45);
+          });
+        } catch (e) {
+          console.warn(e);
+        }
+      }
+
+      function renderGameOverStats() {
+        let cumulativePossible = 0;
+        let clearsCount = 0;
+
+        let rowsHTML = "";
+
+        blanksList.forEach((round, idx) => {
+          const possibleSum = round.answers.reduce((s, a) => s + (parseInt(a.points, 10) || 0), 0);
+          const achievedSum = round.answers
+            .filter(a => a.isRevealed)
+            .reduce((s, a) => s + (parseInt(a.points, 10) || 0), 0);
+          
+          const revealedCount = round.answers.filter(a => a.isRevealed).length;
+
+          cumulativePossible += possibleSum;
+
+          if (revealedCount === round.answers.length) {
+            clearsCount++;
+          }
+
+          rowsHTML += `
+            <div class="bg-slate-950/40 border border-slate-800 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+              <div>
+                <span class="text-[10px] font-bold text-indigo-400 uppercase tracking-widest font-display">Round ${idx + 1}</span>
+                <h4 class="font-bold text-slate-200 text-sm truncate max-w-sm" title="${round.question}">${round.question}</h4>
+              </div>
+              <div class="flex items-center space-x-3 self-end sm:self-auto">
+                <div class="text-right">
+                  <span class="text-[9px] text-slate-500 block">REVEALED ANSWERS</span>
+                  <span class="text-xs font-semibold ${revealedCount === round.answers.length ? 'text-emerald-400' : 'text-slate-400'}">${revealedCount} / ${round.answers.length} options</span>
+                </div>
+                <div class="px-3 py-1.5 rounded-lg bg-slate-950 text-center border ${revealedCount === round.answers.length ? 'border-emerald-500/20' : 'border-indigo-500/10'} min-w-20">
+                  <span class="font-digital text-sm ${revealedCount === round.answers.length ? 'text-emerald-400 font-bold' : 'text-indigo-300'}">${achievedSum} Pts</span>
+                </div>
+              </div>
+            </div>
+          `;
+        });
+
+        // Set Team labels dynamically in Game Over screen
+        const t1Label = document.getElementById('gameover-team1-label');
+        if (t1Label) t1Label.textContent = `${team1Name} Score`;
+
+        const t2Label = document.getElementById('gameover-team2-label');
+        if (t2Label) t2Label.textContent = `${team2Name} Score`;
+
+        // Scores count rollup
+        const score1Elem = document.getElementById('stat-team1-score');
+        if (score1Elem) score1Elem.textContent = String(team1Score);
+
+        const score2Elem = document.getElementById('stat-team2-score');
+        if (score2Elem) score2Elem.textContent = String(team2Score);
+
+        const perfectCard = document.getElementById('stat-perfect-rounds');
+        if (perfectCard) perfectCard.textContent = `${clearsCount} / ${blanksList.length}`;
+
+        // Winner banner logic
+        const winnerNameText = document.getElementById('winner-name-reveal');
+        const winnerScoreText = document.getElementById('winner-score-reveal');
+        if (winnerNameText && winnerScoreText) {
+          if (team1Score > team2Score) {
+            winnerNameText.textContent = `${team1Name.toUpperCase()} WINS! 🏆`;
+            winnerScoreText.textContent = `Scored ${team1Score} pts compared to ${team2Name}'s ${team2Score} pts!`;
+          } else if (team2Score > team1Score) {
+            winnerNameText.textContent = `${team2Name.toUpperCase()} WINS! 🏆`;
+            winnerScoreText.textContent = `Scored ${team2Score} pts compared to ${team1Name}'s ${team1Score} pts!`;
+          } else {
+            winnerNameText.textContent = "IT'S A DRAW! 🤝";
+            winnerScoreText.textContent = `Both teams finished with an equal score of ${team1Score} pts!`;
+          }
+        }
+
+        const summaryContainer = document.getElementById('gameover-rounds-summary');
+        if (summaryContainer) {
+          summaryContainer.innerHTML = rowsHTML;
+        }
+      }
+
+      window.playAgain = function() {
+        activeBlankIndex = 0;
+        blanksList.forEach(b => b.answers.forEach(o => o.isRevealed = false));
+        
+        switchScreen('play');
+        initRound();
+        showToast("Replayed. Let's start the trivia over!", "success");
+      };
+
+      window.resetToEditor = function() {
+        switchScreen('setup');
+        showToast("Session restored in scheduling constructor", "success");
+      };
+    </script>
+  </body>
+</html>
