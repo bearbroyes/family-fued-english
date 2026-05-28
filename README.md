@@ -40,17 +40,3 @@ This project is built using modern frontend tools ensuring lightning-fast perfor
 *   **Core Core:** TypeScript 5.x / HTML5 / Advanced CSS3
 *   **Build Tool:** Vite Bundler
 *   **Hosting:** GitHub Pages Architecture
-
-### 🚀 Local Development
-
-To run this project locally on your machine and apply custom modifications:
-
-```bash
-# Install dependencies
-npm install
-
-# Run development server
-npm run dev
-
-# Compile and build production-ready bundle
-npm run build
